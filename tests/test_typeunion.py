@@ -12,9 +12,9 @@ class MyUnion:
 
     def get_int(self) -> int:
         match self:
-            case MyUnion.RED(a): return -1
-            case MyUnion.GREEN(a, b): return b
-            case MyUnion.BLUE(a, b): return b
+            case MyUnion.RED(_): return -1
+            case MyUnion.GREEN(_, b): return b
+            case MyUnion.BLUE(_, b): return b
             case MyUnion.WHITE: return -2
             case MyUnion.BLACK: return -3
             case _: raise TypeError(f"{self} does not exists")

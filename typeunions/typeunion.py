@@ -1,4 +1,4 @@
-from dataclasses import dataclass, make_dataclass, field
+from dataclasses import make_dataclass
 
 def process_type(name: str, t):
     match t:
