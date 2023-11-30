@@ -13,10 +13,10 @@ pip install typeunions
 ```python
 @typeunion
 class Message
-    Quit:
-    Move: { x: i32, y: i32 }
-    Write: (String)
-    ChangeColor: (i32, i32, i32)
+    Quit: ()
+    Move: { 'x': int, 'y': int }
+    Write: (str)
+    ChangeColor: (int, int, int)
 ```
 
 Each types (`Quit`, `Move`, `Write`, `ChangeColor`) is a python `dataclass`. Hence you can use the `match` `case` pattern:
