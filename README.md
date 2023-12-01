@@ -22,6 +22,8 @@ class Message
 Each types (`Quit`, `Move`, `Write`, `ChangeColor`) is a python `dataclass`. Hence you can use the `match` `case` pattern:
 
 ```python
+message = Message.ChangeColor(255, 128, 0)
+
 match message:
     case Quit: print("quit")
     case Move(x, y): print(f"move {x} {y}")
